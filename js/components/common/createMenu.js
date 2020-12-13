@@ -1,6 +1,7 @@
 import { getUsername } from "../../utils/storage.js";
 import logoutButton from "./logoutButton.js";
 
+
 export default function createMenu() {
   const { pathname } = document.location;
 

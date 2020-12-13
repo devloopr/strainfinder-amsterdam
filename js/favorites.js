@@ -1,4 +1,5 @@
 import { getExistingFavorites } from "./utils/favFunctions.js";
+
 import displayMessage from "./components/common/displayMessage.js";
 const imgUrl = "http://localhost:1337";
 
@@ -7,7 +8,7 @@ const favorites = getExistingFavorites();
 const container = document.querySelector(".product-container");
 
 if (favorites.length === 0) {
-  displayMessage("warning", "No favourites added yet!", ".product-container");
+  displayMessage("warning", "No favourites added yet!", ".message-container");
 }
 favorites.forEach((favorites) => {
   container.innerHTML += `
@@ -39,3 +40,12 @@ favorites.forEach((favorites) => {
                                         </div>
                                   </div>`;
 });
+
+const clearButton = document.querySelector("#clear-button");
+
+clearButton.addEventListener("click", clearFavorites);
+
+function clearFavorites() {
+  localStorage.clear();
+  location.href = "/fav.html";
+}

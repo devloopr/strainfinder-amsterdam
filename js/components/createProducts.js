@@ -1,3 +1,4 @@
+import displayMessage from "./common/displayMessage.js";
 import { getExistingFavorites } from "../utils/favFunctions.js";
 
 export default function createProducts(json) {
@@ -73,6 +74,7 @@ export default function createProducts(json) {
       const product = { id: id, Name: name };
       currentFavs.push(product);
       saveFavs(currentFavs);
+      displayMessage("success", "Added strain to favourites!", ".message-container");
     } else {
       const newFavs = currentFavs.filter((fav) => fav.id !== id);
       saveFavs(newFavs);

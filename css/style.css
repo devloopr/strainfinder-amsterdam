@@ -61,6 +61,11 @@ button {
   cursor: pointer;
 }
 
+#clear-button {
+  justify-content: center;
+  width: 30%;
+}
+
 /* MENU */
 
 .menu {
@@ -100,30 +105,37 @@ button {
 }
 
 .message {
-  width: auto;
+  width: 200px;
   padding: 1rem;
-  border: 1px solid black;
-  color: black;
+  margin: 0 auto;
+}
+
+.message-container {
+  height: auto;
+  width: 500px;
+  margin: 30px auto;
 }
 
 .message.error {
   border-color: var(--cool-red);
   color: var(--cool-black);
   background: var(--cool-red);
-  width: auto;
+
+  border-radius: 15px;
 }
 
 .message.warning {
   border-color: orange;
   color: var(--cool-black);
   background: orange;
-  width: auto;
+  border-radius: 15px;
 }
 
 .message.success {
   border-color: var(--cool-green);
   color: var(--cool-black);
   background: var(--cool-green);
+  border-radius: 15px;
 }
 
 #logout {
@@ -272,4 +284,44 @@ input[type="textet"]:focus {
   background-color: var(--cool-red);
   cursor: pointer;
   color: var(--cool-black);
+}
+
+/* INPUT TEXT AREA */
+
+#description {
+  width: 100%;
+  height: 100px;
+}
+
+#description {
+  width: 30%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+  width: 100%;
+  height: 100px;
+  font-size: 12px;
+}
+
+#description:focus,
+#name:focus,
+#price:focus {
+  outline: none !important;
+  border: 1px solid var(--cool-red);
+  box-shadow: 0 0 5px var(--cool-red);
+}
+
+.clear-btn-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#clear-button {
+  color: var(--cool-black);
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+#clear-button:hover {
+  background-color: var(--cool-yellow);
 }
