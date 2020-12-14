@@ -1,7 +1,7 @@
 import { getExistingFavorites } from "./utils/favFunctions.js";
 
 import displayMessage from "./components/common/displayMessage.js";
-const imgUrl = "http://localhost:1337";
+const imgUrl = "https://strainfinderr.herokuapp.com/";
 
 const favorites = getExistingFavorites();
 
@@ -14,7 +14,7 @@ favorites.forEach((favorites) => {
   container.innerHTML += `
                                    <div class="card">            
                                         <div class="card-image">
-                                             <img class="cardImg" src="${imgUrl}${favorites.imgUrl}"></img>
+                                              <img class="cardImg" src="${imgUrl}${favorites.Imgurl}"></img>
                                         </div>
                                         <div class="card-text">
                                              <h4>${favorites.Name}</h4>

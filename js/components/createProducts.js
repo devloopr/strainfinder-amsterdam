@@ -3,7 +3,7 @@ import { getExistingFavorites } from "../utils/favFunctions.js";
 
 export default function createProducts(json) {
   const container = document.querySelector(".product-container");
-  const imgUrl = "http://localhost:1337";
+  const imgUrl = "https://strainfinderr.herokuapp.com";
   container.innerHTML = "";
 
   const favourites = getExistingFavorites();
@@ -12,12 +12,9 @@ export default function createProducts(json) {
     let cssClass = "far";
 
     const doesObjectExist = favourites.find(function (fav) {
-      console.log(fav);
-
       return parseInt(fav.id) === product.id;
     });
 
-    console.log(doesObjectExist);
     if (doesObjectExist) {
       cssClass = "fa";
     }

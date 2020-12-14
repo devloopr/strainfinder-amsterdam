@@ -11,7 +11,7 @@ if (!id) {
   document.location.href = "/";
 }
 
-const productUrl = baseUrl + "strainfinders/" + id;
+const productUrl = baseUrl + "products/" + id;
 
 console.log(productUrl);
 
@@ -21,14 +21,14 @@ console.log(productUrl);
     const details = await response.json();
 
     document.title = details.name;
-    const imgUrl = "http://localhost:1337";
+    const imgUrl = "https://strainfinderr.herokuapp.com";
 
     const container = document.querySelector(".detail-container");
 
     container.innerHTML = `
                              <img class="detailImg" src="${imgUrl}${details.Img.url}"></img>
                             <h1>${details.Name}</h1>
-                            <p>${details.Description}</p>`;
+                            <p>${details.description}</p>`;
 
     console.log(details);
   } catch (error) {

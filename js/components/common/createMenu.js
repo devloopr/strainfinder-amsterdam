@@ -1,7 +1,6 @@
 import { getUsername } from "../../utils/storage.js";
 import logoutButton from "./logoutButton.js";
 
-
 export default function createMenu() {
   const { pathname } = document.location;
 
@@ -16,8 +15,6 @@ export default function createMenu() {
                 <a href="add.html" class="${pathname === "/add.html" ? "active" : ""}"><i class="fal fa-seedling"></i> Add more strains</a>
                 <button id="logout">Logout </button>`;
   }
-
-  console.log(username);
 
   container.innerHTML = `<div class="menu">
                                 <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}"><i class="fal fa-home-heart"></i> Home</a>
