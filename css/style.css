@@ -7,7 +7,7 @@
   --cool-green: #1fc58e;
   --cool-yellow: #fae62d;
   --cool-black: #191414;
-  --cool-red: #7e191b;
+  --cool-red: RGBa(210, 31, 60, 1);
 }
 
 body {
@@ -166,6 +166,8 @@ button {
   grid-area: text;
   color: var(--cool-black);
   padding-bottom: 10px;
+  background-color: #fcfcfc;
+  background-image: url("../img/brilliant.png");
 }
 
 .card-text i {
@@ -190,6 +192,7 @@ button {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background: var(--cool-green);
+  background-image: url("../img/concrete-wall.png");
 }
 
 .cardImg {
